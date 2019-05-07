@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action='/' method="POST">
+    <input type="number" name="name" placeholder="Enter your name">
+    <input type="number" name="guess" placeholder="Guess the secret number">
+    <button type="submit">Send guess</button>
+</form>
+{% if message %}
+<h2>{{ message }}</h2>
+{% endif %}
+{% endblock %}
